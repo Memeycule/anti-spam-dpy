@@ -11,13 +11,13 @@ async def on_message(msg):
             def checki(m):
                 return m.author == msg.author and m.channel == msg.channel
             #big brain part comes here, the bot waits for the message for 2 seconds and if thats satisfied it waits again for a message for 2 seconds and if the playing reaches the end it means they spammed
-            respa = await self.bot.wait_for('message', timeout=2, check=checki)
+            respa = await bot.wait_for('message', timeout=2, check=checki)
             if respa:
-                respd = await self.bot.wait_for('message', timeout=2, check=checki)
+                respd = await bot.wait_for('message', timeout=2, check=checki)
                 if respd:
-                    respe = await self.bot.wait_for('message', timeout=2, check=checki)
+                    respe = await bot.wait_for('message', timeout=2, check=checki)
                     if respe:
-                        respw= await self.bot.wait_for('message', timeout=2, check=checki)
+                        respw= await bot.wait_for('message', timeout=2, check=checki)
                         if respw:
                             respq = await self.bot.wait_for('message', timeout=2, check=checki)
                             #getting the message author
